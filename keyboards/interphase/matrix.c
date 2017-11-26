@@ -100,10 +100,10 @@ uint8_t matrix_scan(void)
     SERIAL_UART_DATA = 's';
 
     //trust the external keystates entirely, erase the last data
-    uint8_t uart_data[15] = {0};
+    uint8_t uart_data[11] = {0};
 
     //there are 14 bytes corresponding to 14 columns, and an end byte
-    for (uint8_t i = 0; i < 15; i++) {
+    for (uint8_t i = 0; i < 11; i++) {
         //wait for the serial data, timeout if it's been too long
         //this only happened in testing with a loose wire, but does no
         //harm to leave it in here
@@ -118,7 +118,7 @@ uint8_t matrix_scan(void)
 
     //check for the end packet, the key state bytes use the LSBs, so 0xE0
     //will only show up here if the correct bytes were recieved
-    if (uart_data[14] == 0xE0)
+    if (uart_data[10] == 0xE0)
     {
         //shifting and transferring the keystates to the QMK matrix variable
         for (uint8_t i = 0; i < MATRIX_ROWS; i++) {
