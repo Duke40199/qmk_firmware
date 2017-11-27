@@ -122,7 +122,7 @@ uint8_t matrix_scan(void)
     {
         //shifting and transferring the keystates to the QMK matrix variable
         for (uint8_t i = 0; i < MATRIX_ROWS; i++) {
-            matrix[i] = (uint16_t) uart_data[i*2] | (uint16_t) uart_data[i*2+1] << 5;
+            matrix[i] = (uint16_t) uart_data[i*2] | (uint16_t) uart_data[i*2+1] << 7;
         }
     }
 
