@@ -222,7 +222,7 @@ uint8_t matrix_master_scan(void) {
 
     int ret = _matrix_scan();
 
-#ifndef KEYBOARD_helix_rev1
+#ifndef KEYBOARD_ks70_rev1
     int offset = (isLeftHand) ? 0 : ROWS_PER_HAND;
 
 #ifdef USE_MATRIX_I2C

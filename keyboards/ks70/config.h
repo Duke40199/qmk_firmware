@@ -21,20 +21,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "config_common.h"
 
-// GCC include 'config.h" sequence in qmk_firmware/keyboards/helix/
-//   -include keyboards/helix/config.h
-//   -include keyboards/helix/rev?/config.h
-//   -include keyboards/helix/rev?/keymaps/MAPNAME/config.h
+// GCC include 'config.h" sequence in qmk_firmware/keyboards/ks70/
+//   -include keyboards/ks70/config.h
+//   -include keyboards/ks70/rev?/config.h
+//   -include keyboards/ks70/rev?/keymaps/MAPNAME/config.h
 //   XXXX.c
 
 #include <serial_config.h>
 
-// GCC include search path in qmk_firmare/keyboards/helix/
+// GCC include search path in qmk_firmare/keyboards/ks70/
 //    #include "..." search starts here:
 //    #include <...> search starts here:
-//     keyboards/helix/rev?/keymaps/MAPNAME
-//     keyboards/helix
-//     keyboards/helix/rev?
+//     keyboards/ks70/rev?/keymaps/MAPNAME
+//     keyboards/ks70
+//     keyboards/ks70/rev?
 //     .
 //     ./tmk_core
 //     ......

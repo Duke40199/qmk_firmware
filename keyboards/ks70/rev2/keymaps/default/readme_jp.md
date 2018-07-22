@@ -1,4 +1,4 @@
-# The Default Helix Layout
+# The Default KS70 Layout
 ## 配列
 
 ### Qwerty配列
@@ -29,32 +29,32 @@ $ cd qmk_firmware
 qmk_firmwareでは各キーボードのコンパイルは、`<キーボード名>:<キーマップ名>`という指定で行います。
 
 ```
-$ make helix:default
+$ make ks70:default
 ```
 
 キーボードへの書き込みまで同時に行うには下記のように`:avrdude`を付けます。
 
 ```
-$ make helix:default:avrdude
+$ make ks70:default:avrdude
 ```
 
 コンパイル結果と中間生成物を消去したい場合は以下のようにします。
 
 ```
-$ make helix:default:clean
+$ make ks70:default:clean
 ```
 
 ## カスタマイズ
 
-Helix キーボードを4行版として製作したり、オプションの OLED をつけたり、
+KS70 キーボードを4行版として製作したり、オプションの OLED をつけたり、
 RGB バックライトまたは、RGB Underglow をつけた場合は、
-`qmk_firmware/keyboards/helix/rev2/keymaps/default/rules.mk` の以下の部分を編集して機能を有効化してください。
+`qmk_firmware/keyboards/ks70/rev2/keymaps/default/rules.mk` の以下の部分を編集して機能を有効化してください。
 
 ```
-# Helix keyboard customize
+# KS70 keyboard customize
 # you can edit follows 7 Variables
 #  jp: 以下の7つの変数を必要に応じて編集します。
-HELIX_ROWS = 5              # Helix Rows is 4 or 5
+KS70_ROWS = 5              # KS70 Rows is 4 or 5
 OLED_ENABLE = no            # OLED_ENABLE
 LOCAL_GLCDFONT = no         # use each keymaps "helixfont.h" insted of "common/glcdfont.c"
 LED_BACK_ENABLE = no        # LED backlight (Enable WS2812 RGB underlight.)
@@ -64,12 +64,12 @@ IOS_DEVICE_ENABLE = no      # connect to IOS device (iPad,iPhone)
 
 ```
 
-## 4行版Helix に対応する
+## 4行版KS70 に対応する
 
 rules.mk の下記の部分を編集して 5 を 4 に変更してください。
 
 ```
-HELIX_ROWS = 4              # Helix Rows is 4 or 5
+KS70_ROWS = 4              # KS70 Rows is 4 or 5
 ```
 
 ## RGB バックライトを有効にする
@@ -105,5 +105,5 @@ IOS_DEVICE_ENABLE = no      # connect to IOS device (iPad,iPhone)
 
 ## リンク
 
-* さらに詳細は、[こちら helix/Doc/firmware_jp.md](https://github.com/MakotoKurauchi/helix/blob/master/Doc/firmware_jp.md)をご覧ください。
-* [Helix top](https://github.com/MakotoKurauchi/helix)
+* さらに詳細は、[こちら ks70/Doc/firmware_jp.md](https://github.com/MakotoKurauchi/ks70/blob/master/Doc/firmware_jp.md)をご覧ください。
+* [KS70 top](https://github.com/MakotoKurauchi/ks70)

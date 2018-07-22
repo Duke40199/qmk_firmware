@@ -1,4 +1,4 @@
-# The Default Helix Layout
+# The Default KS70 Layout
 ## Layout
 
 ### Qwerty
@@ -105,13 +105,13 @@
 
 ## Customize
 
-see `qmk_firmware/keyboards/helix/rev2/keymaps/default/rules.mk`
+see `qmk_firmware/keyboards/ks70/rev2/keymaps/default/rules.mk`
 
 ```
-# Helix keyboard customize
+# KS70 keyboard customize
 # you can edit follows 7 Variables
 #  jp: 以下の7つの変数を必要に応じて編集します。
-HELIX_ROWS = 5              # Helix Rows is 4 or 5
+KS70_ROWS = 5              # KS70 Rows is 4 or 5
 OLED_ENABLE = no            # OLED_ENABLE
 LOCAL_GLCDFONT = no         # use each keymaps "helixfont.h" insted of "common/glcdfont.c"
 LED_BACK_ENABLE = no        # LED backlight (Enable WS2812 RGB underlight.)
@@ -129,15 +129,14 @@ $ cd qmk_firmware
 
 build
 ```
-$ make helix:default
+$ make ks70:default
 ```
 
 flash to keyboard
 ```
-$ make helix:default:avrdude
+$ make ks70:default:avrdude
 ```
 
 ## Link
-* more detail wrote in Japanese [helix/Doc/firmware_jp.md](https://github.com/MakotoKurauchi/helix/blob/master/Doc/firmware_jp.md)
-* [Helix top](https://github.com/MakotoKurauchi/helix)
-
+* more detail wrote in Japanese [ks70/Doc/firmware_jp.md](https://github.com/MakotoKurauchi/ks70/blob/master/Doc/firmware_jp.md)
+* [KS70 top](https://github.com/MakotoKurauchi/ks70)

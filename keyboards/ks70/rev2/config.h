@@ -23,9 +23,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x3060
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    Yushakobo
-#define PRODUCT         Helix Beta
-#define DESCRIPTION     A split keyboard for the cheap makers
+#define MANUFACTURER    marhalloweenvt
+#define PRODUCT         KS70 Beta
+#define DESCRIPTION     A split keyboard not for othorlinear lovers
 
 
 #define PREVENT_STUCK_MODIFIERS
@@ -42,7 +42,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define MASTER_RIGHT
 // #define EE_HANDS
 
-// Helix keyboard OLED support
+// KS70 keyboard OLED support
 //      see ./rules.mk: OLED_ENABLE=yes or no
 #ifdef OLED_ENABLE
   #define SSD1306OLED
@@ -50,11 +50,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Select rows configuration */
 // Rows are 4 or 5
-// #define HELIX_ROWS 5 see ./rules.mk
+// #define KS70_ROWS 5 see ./rules.mk
 
 /* key matrix size */
 // Rows are doubled-up
-#if  HELIX_ROWS == 4
+#if  KS70_ROWS == 4
   #define MATRIX_ROWS 8
   #define MATRIX_ROW_PINS { D4, C6, D7, E6 }
 #else
@@ -93,11 +93,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ws2812_PORTREG  PORTD
 #define ws2812_DDRREG   DDRD
 
-// Helix keyboard RGB LED support
+// KS70 keyboard RGB LED support
 //#define RGBLIGHT_ANIMATIONS : see ./rules.mk: LED_ANIMATIONS = yes or no
 //    see ./rules.mk: LED_BACK_ENABLE or LED_UNDERGLOW_ENABLE set yes
 #ifdef RGBLED_BACK
-  #if HELIX_ROWS == 4
+  #if KS70_ROWS == 4
     #define RGBLED_NUM 25
   #else
     #define RGBLED_NUM 32
@@ -110,7 +110,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   #if RGBLED_NUM <= 6
     #define RGBLIGHT_LIMIT_VAL 255
   #else
-    #if HELIX_ROWS == 4
+    #if KS70_ROWS == 4
       #define RGBLIGHT_LIMIT_VAL 130
     #else
       #define RGBLIGHT_LIMIT_VAL 120
@@ -121,7 +121,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   #if RGBLED_NUM <= 6
     #define RGBLIGHT_LIMIT_VAL 90
   #else
-    #if HELIX_ROWS == 4
+    #if KS70_ROWS == 4
       #define RGBLIGHT_LIMIT_VAL 45
     #else
       #define RGBLIGHT_LIMIT_VAL 35
@@ -133,7 +133,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_SAT_STEP 17
 
 #if defined(RGBLIGHT_ENABLE) && !defined(IOS_DEVICE_ENABLE)
-// USB_MAX_POWER_CONSUMPTION value for Helix keyboard
+// USB_MAX_POWER_CONSUMPTION value for KS70 keyboard
 //  120  RGBoff, OLEDoff
 //  120  OLED
 //  330  RGB 6

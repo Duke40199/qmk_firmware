@@ -1,4 +1,4 @@
-#include "helix.h"
+#include "ks70.h"
 
 
 #ifdef SSD1306OLED
@@ -12,4 +12,3 @@ void matrix_init_kb(void) {
 
 	matrix_init_user();
 };
-
