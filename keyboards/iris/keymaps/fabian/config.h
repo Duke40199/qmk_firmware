@@ -1,8 +1,5 @@
 /*
-This is the c configuration file for the keymap
-
-Copyright 2012 Jun Wako <wakojun@gmail.com>
-Copyright 2015 Jack Humbert
+Copyright 2017 Danny Nguyen <danny@keeb.io>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -18,26 +15,25 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef CONFIG_USER_H
-#define CONFIG_USER_H
+#pragma once
 
-// place overrides here
+// Add layout to the product identifier
+#undef PRODUCT
+#define PRODUCT         Iris Keyboard (fabian)
 
-#ifdef MOUSEKEY_ENABLE
-  #undef MOUSEKEY_INTERVAL
-  #define MOUSEKEY_INTERVAL 0
+/* Use I2C or Serial, not both */
+// #define USE_SERIAL
+#define USE_I2C
 
-  #undef MOUSEKEY_TIME_TO_MAX
-  #define MOUSEKEY_TIME_TO_MAX 150
+/* Select hand configuration */
+#define MASTER_LEFT
+// #define MASTER_RIGHT
+// #define EE_HANDS
 
-  #undef MOUSEKEY_MAX_SPEED
-  #define MOUSEKEY_MAX_SPEED 3
-
-  #undef MOUSEKEY_MOVE_DELTA
-  #define MOUSEKEY_MOVE_DELTA 5
-
-  #undef MOUSEKEY_DELAY
-  #define MOUSEKEY_DELAY 0
-#endif
-
-#endif /* CONFIG_USER_H */
+// RGB configuration
+#undef RGBLED_NUM
+#define RGBLIGHT_ANIMATIONS
+#define RGBLED_NUM 12
+#define RGBLIGHT_HUE_STEP 8
+#define RGBLIGHT_SAT_STEP 8
+#define RGBLIGHT_VAL_STEP 8
