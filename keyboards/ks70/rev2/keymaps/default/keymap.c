@@ -552,11 +552,11 @@ static void render_logo(struct CharacterMatrix *matrix) {
 void render_status(struct CharacterMatrix *matrix) {
 
   // Render to mode icon
-  static char logo[][2][3]={{{0x95,0x96,0},{0xb5,0xb6,0}},{{0x97,0x98,0},{0xb7,0xb8,0}}};
-    matrix_write(matrix, logo[1][0]);
+  static char logo[][2][3]={{{0x95,0x96,0},{0xb5,0xb6,0}},{{0x97,0x98,0},{0xb7,0xb8,0}},{{0x01,0x02,0},{0x21,0x22,0}}};
+    matrix_write(matrix, logo[2][0]);
     matrix_write_P(matrix, PSTR(" marhalloweenvt"));
     matrix_write_P(matrix, PSTR("\n"));
-    matrix_write(matrix, logo[1][1]);
+    matrix_write(matrix, logo[2][1]);
     matrix_write_P(matrix, PSTR(" KS70 Prototype"));
 
   // Define layers here, Have not worked out how to have text displayed for each layer. Copy down the number you see and add a case for it below
